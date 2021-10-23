@@ -31,10 +31,5 @@ console.log('Press CTRL+C to skip 5s timeout');
 npm i terminable
 ```
 
-## Tests
-```
-There are no tests yet
-```
-
 ## License
 Code released under the [MIT License](https://github.com/LuKks/terminable/blob/master/LICENSE).
