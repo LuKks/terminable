@@ -1,6 +1,6 @@
 {
   "name": "terminable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Terminable resource",
   "main": "index.js",
   "scripts": {
