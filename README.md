@@ -1,6 +1,6 @@
 # terminable
 
-Terminable resource
+Handle resources for gracefully exit
 
 ![](https://img.shields.io/npm/v/terminable.svg) ![](https://img.shields.io/npm/dt/terminable.svg) ![](https://img.shields.io/github/license/LuKks/terminable.svg)
 
