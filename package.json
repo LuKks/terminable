@@ -1,6 +1,6 @@
 {
   "name": "terminable",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Handle resources for graceful exit",
   "main": "index.js",
   "scripts": {
