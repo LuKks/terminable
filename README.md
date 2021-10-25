@@ -5,25 +5,25 @@ Handle resources for gracefully exit
 ![](https://img.shields.io/npm/v/terminable.svg) ![](https://img.shields.io/npm/dt/terminable.svg) ![](https://img.shields.io/github/license/LuKks/terminable.svg)
 
 ```javascript
-const Terminable = require('terminable');
+const Terminable = require('terminable')
 
-const terminable = new Terminable();
+const terminable = new Terminable()
 
 const timeoutId = setTimeout(function () {
-  terminable.delete(timeoutId);
-  console.log('long running task');
-}, 5000);
+  terminable.delete(timeoutId)
+  console.log('long running task')
+}, 5000)
 
 const state = terminable.add(timeoutId, function () {
-  clearTimeout(timeoutId);
-  setTimeout(() => console.log('clean up async'), 500);
-});
+  clearTimeout(timeoutId)
+  setTimeout(() => console.log('clean up async'), 500)
+})
 
 process.once('SIGINT', function () {
-  state.cleanup();
-});
+  state.cleanup()
+})
 
-console.log('Press CTRL+C to skip 5s timeout');
+console.log('Press CTRL+C to skip 5s timeout')
 ```
 
 ## Install
