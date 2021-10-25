@@ -34,13 +34,13 @@ module.exports = class Terminable extends EventEmitter {
       state.cb = cb
       state.on('cleanup', state.cb)
     } else {
-      this._add(resource, resource.constructor.name)
+      this._add(resource, state, resource.constructor.name)
     }
 
     return state
   }
 
-  _add (resource, type) {
+  _add (resource, state, type) {
     // noop
   }
 
