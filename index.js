@@ -27,19 +27,20 @@ module.exports = class Terminable extends EventEmitter {
 
     state = new Terminable()
     state._add = this._add
+    state._find = this._find
     this.resources.set(resource, state)
 
     if (cb) {
       state.cb = cb
       state.on('cleanup', state.cb)
     } else {
-      this._add(resource)
+      this._add(resource, resource.constructor.name)
     }
 
     return state
   }
 
-  _add (resource) {
+  _add (resource, type) {
     // noop
   }
 
@@ -56,7 +57,7 @@ module.exports = class Terminable extends EventEmitter {
   }
 
   find (resource) {
-    let state = this._find(resource)
+    let state = this._find(resource, resource.constructor.name)
     if (state !== undefined) return state
 
     state = this.get(resource)
@@ -71,7 +72,7 @@ module.exports = class Terminable extends EventEmitter {
     return state
   }
 
-  _find (resource) {
+  _find (resource, type) {
     // noop
   }
 
